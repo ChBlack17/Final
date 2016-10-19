@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Ultimate GIFs</title>
+        
+        <!-- Bootstrap 4 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-static-top navbar-dark bg-inverse">
+            <div class="container">
+                <a class="navbar-brand" href="/">G.I.F.</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Get ready for some GIFs!</h1>
+                <p>Search for GIFs to your heart's delight.</p>
+                <a href="#searchPanel" class="btn btn-primary btn-lg" data-toggle="collapse">Start</a>
+            </div>
+        </div>
+
+     <div id="searchPanel" class="container collapse">
+            
+        <form action="/results">
+          <div class="form-group">
+              <label for="inputKeyword">GIF Search Keyword</label>
+              <input name="keyword" type="text" class="form-control" id="inputKeyword" aria-describedby="keywordHelp" placeholder="Give us a keyword for your GIFs">
+              <small id="keywordHelp" class="form-text text-muted">The weirder, the better!</small>    <button type="submit" class="btn btn-primary">Submit</button>   
+          </div> 
+        </form>
+            
+
+    </div>
+
+            
+            <!-- Footer -->
+            <hr>
+            <footer>
+                <p>© Tom and Chris 2016</p>
+            </footer>
+
+        </div>
+    </body>
+</html>

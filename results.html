@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Chris/Tom's Gifoogle</title>
+
+        <!-- Bootstrap 4 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+    </head>
+    <body>
+        
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-static-top navbar-dark bg-inverse">
+            <div class="container">
+                <a class="navbar-brand" href="/">G.I.F.</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Jumbotron -->
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Here are your gifs:</h1>
+                <a href="/">Back to search</a>
+            </div>
+        </div>
+
+        <!-- GIF Search Results -->
+        <div class="container">
+            <div class="card-columns">
+                <div class="card">
+
+                <!-- this is the tricky part. the first href has to be a link and the src the gif itsel. As far as I understood we have to loop this argument. Not sure if this is the right way to pass the url and gifs, though -->
+
+                 {% for result in results %}
+
+                  <a href= {{ url }} target="_blank">
+                    <img class="card-img-top" src= {{ media }} style="width:100%; height:auto;">
+                  </a>
+                </div>
+                          
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </body>
+</html>
