@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Chris/Tom's Gifoogle</title>
+        <title>Ultimate GIFs</title>
 
         <!-- Bootstrap 4 CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
@@ -26,29 +26,16 @@
 
         <div class="jumbotron">
             <div class="container">
-                <h1>Here are your gifs:</h1>
-                <a href="/">Back to search</a>
-            </div>
-        </div>
-
-        <!-- GIF Search Results -->
-        <div class="container">
-            <div class="card-columns">
                 <div class="card">
-
-                <!-- this is the tricky part. the first href has to be a link and the src the gif itsel. As far as I understood we have to loop this argument. Not sure if this is the right way to pass the url and gifs, though -->
-
-                 {% for result in results %}
-
-                  <a href= {{ url }} target="_blank">
-                    <img class="card-img-top" src= {{ media }} style="width:100%; height:auto;">
-                  </a>
+                <h1>Voila! Here are your gifs:</h1>
+                    {% for result in results %}
+                        <a href="{{ result.url }}" target="_blank"><img class="card-img-top" src="{{ result.media_url }}" style="width:75%; height:auto;"></a> 
+                    {% endfor %}
                 </div>
-                          
-                {% endfor %}
-
-            </div>
+            </div>          
         </div>
-
+        <div class="container">
+            <a href="/">Back to search</a>
+        </div>
     </body>
 </html>
