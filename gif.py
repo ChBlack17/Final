@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request
 import giphypop
 import os
-from dotenv import load_dotenv, find_dotenv
-load_dotenv(find_dotenv())
 import urllib,json
 
 app = Flask(__name__)
