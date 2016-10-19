@@ -8,7 +8,7 @@ import urllib,json
 app = Flask(__name__)
 
 # API Key from Giphy
-g = giphypop.Giphy()
+gif_key = os.environ['GIPHY_PUBLIC_API']
 
 # HTML Pages
 @app.route('/')
@@ -16,7 +16,7 @@ def index():
 	return render_template('index.html') 
 
 @app.route('/results')
-def results():
+def results(gif_key):
 	# do search
 	gifmedia = [] # Make empty list
 	gifurl = []
