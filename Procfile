@@ -1,1 +1,1 @@
-web: python gif.py
+web: python web.py
