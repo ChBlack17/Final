@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
-import giphypop
 import os
-
+import giphypop
 app = Flask(__name__)
 
 # HTML Pages:
@@ -19,9 +18,9 @@ def about():
 #Results (Search from Giphy)
 @app.route('/results')
 def results():
-	gifs = request.values.get('name') 
+	searchterm = request.values.get('name') 
 	giphyobject = giphypop.Giphy()
-	results = giphyobject.search(gifs)
+	results = giphyobject.search(searchterm)
 	return render_template('results.html', results=results)	 
 
 # These next lines are needed for Heroku:
